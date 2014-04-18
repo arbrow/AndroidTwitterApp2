@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/platinum"
+    tools:context="com.laurengariepy.android.mytwitterapp.activities.ComposeTweetActivity"
+    tools:ignore="MergeRootFrame" >
+    
+    <fragment
+        android:id="@+id/fragmentComposeTweet"
+        android:name="com.laurengariepy.android.mytwitterapp.fragments.ComposeTweetFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        tools:layout="@layout/fragment_compose_tweet" />
+
+</RelativeLayout>
+
+<!-- 
+Notes regarding the tools namespace:
+
+Android has a dedicated XML namespace intended for tools to be able to record info in XML files and have that
+info stripped when the application is packaged such that there's no runtime or download size penalty. 
+
+The namespace URI is http://schemas.android.com/tools, and is usually bound to the tools: prefix.  
+
+tools:ignore  -> This attribute can be set on any XML element, and is a comma-separated list of Lint issue IDs 
+that should be ignored on this element or any of its children, recursively. 
+
+tools:context -> This attribute is typically set on the root element in an XML layout file and records which 
+activity the layout is associated with (at designtime, since obviously a layout can be used by more than one
+layout). This will be used, for example, by the layout editor to guess a default theme, since themes are 
+defined in the Manifest and are associated with activities, not layouts. You can use the same dot prefix as in
+manifests to specify just the activity class without the full application package name as prefix.  
+-->

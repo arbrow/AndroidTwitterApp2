@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/platinum" >
+    
+  <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/cancel_button_design"
+        android:textColor="@color/white"
+        android:text="@string/btn_cancel" />
+
+    <Button
+        android:id="@+id/btnTweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/tweet_button_design"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="@string/btn_tweet" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnCancel"
+        android:layout_margin="10dp" 
+        android:orientation="vertical" >
+
+        <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="2dp"
+         android:background="@color/white"
+         android:orientation="horizontal" >
+         
+            <ImageView
+                android:id="@+id/ivUserImage"
+     		    android:layout_width="wrap_content"
+         		android:layout_height="wrap_content" 
+         		android:layout_alignParentLeft="true"
+         		android:layout_centerVertical="true"
+         		android:layout_margin="10dp" 
+         		android:src="@drawable/ic_action_user_profile_dark" />
+         
+            <TextView 
+                android:id="@+id/tvUserName"
+      		    android:layout_width="match_parent"
+         		android:layout_height="wrap_content" 
+         		android:layout_toRightOf="@+id/ivUserImage"
+         		android:layout_centerVertical="true"
+         		android:textStyle="bold|italic"
+         		android:text="\@knickknackdemo" />
+                       
+         </RelativeLayout>   
+        
+         <EditText
+             android:id="@+id/etNewTweet"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:padding="10dp"
+             android:background="@color/white"
+             android:gravity="top"
+             android:hint="@string/et_new_tweet_hint"
+             android:inputType="textEmailAddress|textCapSentences|textMultiLine"
+             android:imeOptions="actionDone" /> 
+         	 					
+    </LinearLayout>
+    
+</RelativeLayout>

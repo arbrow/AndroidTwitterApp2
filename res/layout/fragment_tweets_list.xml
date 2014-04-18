@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_cloud"
+    tools:context="com.laurengariepy.android.mytwitterapp.fragments.TweetsListFragment"
+    tools:ignore="MergeRootFrame" >
+
+    <ListView
+        android:id="@+id/lvTweets"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" 
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/white" >
+    </ListView>
+
+</RelativeLayout>
